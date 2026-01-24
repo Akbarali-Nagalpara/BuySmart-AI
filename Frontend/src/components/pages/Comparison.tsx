@@ -140,14 +140,15 @@ export function Comparison() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <Navigation />
 
-      <div className="px-8 lg:px-16 py-8">
+      <div className="lg:ml-64 pt-16 lg:pt-0">
+      <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
         {/* Header */}
-        <div className="mb-12 pb-8 border-b border-slate-200/50 dark:border-slate-700/50">
-          <h1 className="text-5xl font-extralight text-slate-900 dark:text-white mb-3 flex items-center gap-4">
-            <TrendingUp className="w-10 h-10 text-slate-600" />
-            Compare Products
+        <div className="mb-8 md:mb-12 pb-6 md:pb-8 border-b border-slate-200/50 dark:border-slate-700/50">
+          <h1 className="text-3xl md:text-5xl font-extralight text-slate-900 dark:text-white mb-3 flex items-center gap-3 md:gap-4">
+            <TrendingUp className="w-8 h-8 md:w-10 md:h-10 text-slate-600" />
+            <span className="truncate">Compare Products</span>
           </h1>
-          <p className="text-slate-600 dark:text-slate-400 text-lg">
+          <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg">
             Select products from your analyzed history to compare side-by-side
           </p>
         </div>
@@ -276,7 +277,7 @@ export function Comparison() {
               <div className="space-y-6">
             {/* Winner Banner */}
             {bestProduct && selectedProducts.length > 1 && (
-              <div className="bg-green-50 dark:from-green-900/20 rounded-lg p-5 border border-green-500 dark:border-green-400">
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-5 border border-green-500 dark:border-green-400">
                 <div className="flex items-center gap-3">
                   <div className="bg-green-500 dark:bg-green-400 rounded-full p-2">
                     <Award className="w-6 h-6 text-white dark:text-slate-900" />
@@ -292,9 +293,9 @@ export function Comparison() {
             {/* Product Cards Grid */}
             <div className={`grid gap-4 ${
               selectedProducts.length === 1 ? 'grid-cols-1 max-w-xl mx-auto' :
-              selectedProducts.length === 2 ? 'grid-cols-2' :
-              selectedProducts.length === 3 ? 'grid-cols-3' :
-              'grid-cols-4'
+              selectedProducts.length === 2 ? 'grid-cols-1 md:grid-cols-2' :
+              selectedProducts.length === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' :
+              'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
             }`}>
               {selectedProducts.map((product) => (
                 <div
@@ -611,5 +612,8 @@ export function Comparison() {
         </div>
       </div>
     </div>
+    </div>
   );
 }
+
+

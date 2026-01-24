@@ -151,7 +151,8 @@ export function Settings() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <Navigation />
 
-      <div className="px-8 lg:px-16 py-8">
+      <div className="lg:ml-64 pt-16 lg:pt-0">
+      <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
         <div className="max-w-4xl">
           {/* Header */}
           <div className="mb-8 pb-8 border-b border-slate-200/50 dark:border-slate-700/50">
@@ -494,6 +495,7 @@ export function Settings() {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

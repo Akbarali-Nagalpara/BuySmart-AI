@@ -34,8 +34,8 @@ export function Landing() {
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50">
-        <div className="container mx-auto px-8 lg:px-16">
-          <div className="flex items-center justify-between h-20">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+          <div className="flex items-center justify-between h-16 md:h-20">
             <FadeIn direction="left" duration={0.6}>
               <div className="flex items-center gap-3">
                 <div className="relative">
@@ -50,7 +50,7 @@ export function Landing() {
               </div>
             </FadeIn>
             <FadeIn direction="right" duration={0.6} delay={0.2}>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2 md:gap-6">
                 <button
                   onClick={toggleTheme}
                   className="p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
@@ -64,12 +64,12 @@ export function Landing() {
                 </button>
                 <Link
                   to="/login"
-                  className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-medium transition-colors px-4 py-2"
+                  className="hidden sm:block text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-medium transition-colors px-4 py-2"
                 >
                   Login
                 </Link>
-                <Link to="/register" className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-2.5 rounded-xl font-medium hover:scale-105 transition-transform shadow-lg">
-                  Get Started Free
+                <Link to="/register" className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-3 md:px-6 py-2 md:py-2.5 rounded-xl text-sm md:text-base font-medium hover:scale-105 transition-transform shadow-lg">
+                  Get Started
                 </Link>
               </div>
             </FadeIn>
@@ -78,18 +78,18 @@ export function Landing() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-8 lg:px-16 py-24 md:py-32 relative z-10">
+      <section className="container mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-24 lg:py-32 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           <FadeIn delay={0.2}>
-            <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm text-slate-700 dark:text-slate-300 px-5 py-2.5 rounded-full mb-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm text-slate-700 dark:text-slate-300 px-4 md:px-5 py-2 md:py-2.5 rounded-full mb-6 md:mb-8 border border-slate-200 dark:border-slate-800 shadow-sm">
               <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span className="text-sm font-medium">AI-Powered Shopping Intelligence</span>
+              <span className="text-xs md:text-sm font-medium">AI-Powered Shopping Intelligence</span>
             </div>
           </FadeIn>
           
           <FadeIn delay={0.4} duration={0.8}>
-            <h1 className="text-6xl md:text-8xl font-extralight tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
-              Shop <span className="font-semibold">Smarter</span>{' '}<br/>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extralight tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
+              Shop <span className="font-semibold">Smarter</span>{' '}<br className="hidden sm:block"/>
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">
                 Not Harder
               </span>
@@ -97,7 +97,7 @@ export function Landing() {
           </FadeIn>
           
           <FadeIn delay={0.6} duration={0.8}>
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light">
               Let AI analyze thousands of reviews in seconds. Get honest recommendations,
               spot fake reviews, and make confident purchase decisions.
             </p>
@@ -145,9 +145,9 @@ export function Landing() {
 
       {/* Features */}
       <section className="py-24 bg-slate-100/50 dark:bg-slate-900/50">
-        <div className="container mx-auto px-8 lg:px-16">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-extralight text-slate-900 dark:text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-extralight text-slate-900 dark:text-white mb-4">
               Why Choose <span className="font-semibold">BuySmart AI</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -215,9 +215,9 @@ export function Landing() {
 
       {/* How It Works */}
       <section className="py-24">
-        <div className="container mx-auto px-8 lg:px-16">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-extralight text-slate-900 dark:text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-extralight text-slate-900 dark:text-white mb-4">
               <span className="font-semibold">Three Simple Steps</span> to Smarter Shopping
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400">
@@ -270,9 +270,9 @@ export function Landing() {
 
       {/* Testimonials */}
       <section className="py-24 bg-slate-100/50 dark:bg-slate-900/50">
-        <div className="container mx-auto px-8 lg:px-16">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-extralight text-slate-900 dark:text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-extralight text-slate-900 dark:text-white mb-4">
               Loved by <span className="font-semibold">15,000+ Users</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400">
@@ -334,14 +334,14 @@ export function Landing() {
 
       {/* CTA Section */}
       <section className="py-24">
-        <div className="container mx-auto px-8 lg:px-16">
-          <div className="relative bg-slate-900 dark:bg-white rounded-3xl p-16 text-center overflow-hidden">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+          <div className="relative bg-slate-900 dark:bg-white rounded-3xl p-8 md:p-16 text-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 dark:from-blue-400/10 dark:via-purple-400/10 dark:to-pink-400/10"></div>
             <div className="relative z-10">
-              <h2 className="text-5xl font-extralight text-white dark:text-slate-900 mb-6">
+              <h2 className="text-3xl md:text-5xl font-extralight text-white dark:text-slate-900 mb-6">
                 Ready to <span className="font-semibold">Transform</span> Your Shopping?
               </h2>
-              <p className="text-xl text-slate-300 dark:text-slate-600 mb-10 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-slate-300 dark:text-slate-600 mb-10 max-w-2xl mx-auto">
                 Join 15,000+ smart shoppers making confident purchase decisions with AI
               </p>
               <Link
@@ -359,7 +359,7 @@ export function Landing() {
 
       {/* Footer */}
       <footer className="bg-slate-950 dark:bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
-        <div className="container mx-auto px-8 lg:px-16">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-4">

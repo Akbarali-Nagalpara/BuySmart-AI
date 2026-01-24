@@ -99,20 +99,21 @@ export function Dashboard() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <Navigation />
       
-      <div className="px-8 lg:px-16 py-10">
+      <div className="lg:ml-64 pt-16 lg:pt-0">
+      <div className="px-4 md:px-8 lg:px-12 py-6 md:py-10">
         {/* Header Section */}
-        <div className="flex items-center justify-between mb-16 pb-8 border-b border-slate-200/50 dark:border-slate-800/50">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12 md:mb-16 pb-6 md:pb-8 border-b border-slate-200/50 dark:border-slate-800/50">
           <div>
-            <h1 className="text-5xl font-extralight tracking-tight text-slate-900 dark:text-white mb-3">
+            <h1 className="text-3xl md:text-5xl font-extralight tracking-tight text-slate-900 dark:text-white mb-2 md:mb-3">
               Dashboard
             </h1>
-            <p className="text-slate-400 dark:text-slate-500 text-lg">
+            <p className="text-slate-400 dark:text-slate-500 text-base md:text-lg">
               Your product analysis insights
             </p>
           </div>
           <Link
             to="/analyze"
-            className="group relative inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-lg font-medium hover:scale-105 transition-transform"
+            className="group relative inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm md:text-base font-medium hover:scale-105 transition-transform w-full sm:w-auto justify-center"
           >
             <ShoppingCart className="w-5 h-5" />
             New Analysis
@@ -120,32 +121,32 @@ export function Dashboard() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-12 mb-12">
           {/* Total Analyses */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative p-6">
-              <div className="text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-4 font-medium">
+            <div className="relative p-4 md:p-6">
+              <div className="text-xs md:text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-2 md:mb-4 font-medium">
                 Total
               </div>
-              <div className="text-6xl font-extralight text-slate-900 dark:text-white mb-3 tracking-tight">
+              <div className="text-4xl md:text-6xl font-extralight text-slate-900 dark:text-white mb-2 md:mb-3 tracking-tight">
                 {stats.totalAnalyses}
               </div>
-              <div className="text-sm text-slate-500 dark:text-slate-500">Analyses</div>
+              <div className="text-xs md:text-sm text-slate-500 dark:text-slate-500">Analyses</div>
             </div>
           </div>
 
           {/* Buy Recommendations */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative p-6">
-              <div className="text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-4 font-medium">
+            <div className="relative p-4 md:p-6">
+              <div className="text-xs md:text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-2 md:mb-4 font-medium">
                 Buy
               </div>
-              <div className="text-6xl font-extralight text-green-600 dark:text-green-400 mb-3 tracking-tight">
+              <div className="text-4xl md:text-6xl font-extralight text-green-600 dark:text-green-400 mb-2 md:mb-3 tracking-tight">
                 {stats.buyRecommendations}
               </div>
-              <div className="text-sm text-slate-500 dark:text-slate-500">
+              <div className="text-xs md:text-sm text-slate-500 dark:text-slate-500">
                 {stats.totalAnalyses > 0 ? Math.round((stats.buyRecommendations / stats.totalAnalyses) * 100) : 0}% Recommended
               </div>
             </div>
@@ -154,14 +155,14 @@ export function Dashboard() {
           {/* Not Buy Recommendations */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative p-6">
-              <div className="text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-4 font-medium">
+            <div className="relative p-4 md:p-6">
+              <div className="text-xs md:text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-2 md:mb-4 font-medium">
                 Not Buy
               </div>
-              <div className="text-6xl font-extralight text-red-600 dark:text-red-400 mb-3 tracking-tight">
+              <div className="text-4xl md:text-6xl font-extralight text-red-600 dark:text-red-400 mb-2 md:mb-3 tracking-tight">
                 {stats.notBuyRecommendations}
               </div>
-              <div className="text-sm text-slate-500 dark:text-slate-500">
+              <div className="text-xs md:text-sm text-slate-500 dark:text-slate-500">
                 {stats.totalAnalyses > 0 ? Math.round((stats.notBuyRecommendations / stats.totalAnalyses) * 100) : 0}% Flagged
               </div>
             </div>
@@ -170,11 +171,11 @@ export function Dashboard() {
           {/* Average Score */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-slate-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative p-6">
-              <div className="text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-4 font-medium">
+            <div className="relative p-4 md:p-6">
+              <div className="text-xs md:text-sm uppercase tracking-wider text-slate-400 dark:text-slate-600 mb-2 md:mb-4 font-medium">
                 Average
               </div>
-              <div className="text-6xl font-extralight text-slate-900 dark:text-white mb-3 tracking-tight">
+              <div className="text-4xl md:text-6xl font-extralight text-slate-900 dark:text-white mb-2 md:mb-3 tracking-tight">
                 {stats.averageScore}
               </div>
               <div className="relative h-1 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden mt-2">
@@ -188,7 +189,7 @@ export function Dashboard() {
         </div>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
           {/* Wishlist Count */}
           <Link
             to="/wishlist"
@@ -482,6 +483,7 @@ export function Dashboard() {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 }

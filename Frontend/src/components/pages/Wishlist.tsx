@@ -120,11 +120,13 @@ export function Wishlist() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <Navigation />
-        <div className="px-8 lg:px-16 py-8">
+        <div className="lg:ml-64 pt-16 lg:pt-0">
+        <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
           <div className="flex flex-col items-center justify-center h-96 gap-4">
             <Loader2 className="w-12 h-12 text-slate-600 animate-spin" />
             <p className="text-sm text-slate-500 dark:text-slate-400">Loading your wishlist...</p>
           </div>
+        </div>
         </div>
       </div>
     );
@@ -134,7 +136,8 @@ export function Wishlist() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <Navigation />
 
-      <div className="px-8 lg:px-16 py-8">
+      <div className="lg:ml-64 pt-16 lg:pt-0">
+      <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
         {/* Header */}
         <div className="mb-12 pb-8 border-b border-slate-200/50 dark:border-slate-700/50">
           <h1 className="text-5xl font-extralight text-slate-900 dark:text-white mb-3 flex items-center gap-4">
@@ -461,6 +464,8 @@ export function Wishlist() {
           </div>
         </div>
       )}
-    </div>
+      </div>
+      </div>
+    
   );
 }

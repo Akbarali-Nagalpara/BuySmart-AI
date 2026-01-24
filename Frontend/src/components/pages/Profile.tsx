@@ -22,10 +22,11 @@ export function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-slate-900">
       <Navigation />
       
-      <div className="container mx-auto px-6 py-8">
+      <div className="lg:ml-64 pt-16 lg:pt-0">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 md:py-8">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="mb-8">
@@ -142,6 +143,7 @@ export function Profile() {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

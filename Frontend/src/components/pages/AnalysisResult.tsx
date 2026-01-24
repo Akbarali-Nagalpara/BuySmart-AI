@@ -141,11 +141,13 @@ export function AnalysisResult() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <Navigation />
-        <div className="px-8 lg:px-16 py-8">
+        <div className="lg:ml-64 pt-16 lg:pt-0">
+        <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
           <div className="flex flex-col items-center justify-center h-96">
             <Loader2 className="w-12 h-12 text-slate-600 animate-spin mb-4" />
             <p className="text-slate-600 dark:text-slate-400">Loading analysis results...</p>
           </div>
+        </div>
         </div>
       </div>
     );
@@ -155,7 +157,8 @@ export function AnalysisResult() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <Navigation />
-        <div className="px-8 lg:px-16 py-8">
+        <div className="lg:ml-64 pt-16 lg:pt-0">
+        <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
           <div className="bg-white dark:bg-slate-800 border border-red-200 dark:border-red-800 rounded-lg p-8 text-center">
             <XCircle className="w-12 h-12 text-red-600 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Error Loading Results</h2>
@@ -168,6 +171,7 @@ export function AnalysisResult() {
             </button>
           </div>
         </div>
+        </div>
       </div>
     );
   }
@@ -176,7 +180,8 @@ export function AnalysisResult() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <Navigation />
       
-      <div className="px-8 lg:px-16 py-8">
+      <div className="lg:ml-64 pt-16 lg:pt-0">
+      <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
         {/* Back Button */}
         <button
           onClick={() => navigate('/analyze')}
@@ -429,6 +434,7 @@ export function AnalysisResult() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -96,7 +96,8 @@ export function Help() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <Navigation />
 
-      <div className="px-8 lg:px-16 py-8">
+      <div className="lg:ml-64 pt-16 lg:pt-0">
+      <div className="px-4 md:px-8 lg:px-12 py-6 md:py-8">
         {/* Header */}
         <div className="text-center mb-12 pb-8 border-b border-slate-200/50 dark:border-slate-700/50">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-slate-100 dark:bg-slate-800 rounded-2xl mb-6 border border-slate-200 dark:border-slate-700">
@@ -211,6 +212,7 @@ export function Help() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
