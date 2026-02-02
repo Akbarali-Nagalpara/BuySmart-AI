@@ -40,23 +40,23 @@ public class ProductServiceImpl implements ProductService {
 
 
     private final PriceHistoryService priceHistoryService;
-    @Value("${rapidapi.key}")
+    @Value("${rapidkey}")
     private String rapidApiKey;
 
-    @Value("${rapidapi.host}")
+    @Value("${rapidhost}")
     private String rapidApiHost;
 
-    @Value("${apify.api.key}")
+    @Value("${apifykey}")
     private String apifyApiKey;
 
 
-    @Value("${rapidapi.base-url}")
+    @Value("${rapidurl}")
     private String rapidApiBaseUrl;
 
     @Value("${ai.enabled:false}")
     private boolean aiEnabled;
 
-    @Value("${ai.service.url:http://localhost:5001/analyze}")
+    @Value("${aiserviceurl}")
     private String aiServiceUrl;
 
 
